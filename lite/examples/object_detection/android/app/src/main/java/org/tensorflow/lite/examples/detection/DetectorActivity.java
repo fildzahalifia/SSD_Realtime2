@@ -50,8 +50,8 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
   private static final Logger LOGGER = new Logger();
 
   // Configuration values for the prepackaged SSD model.
-  private static final int TF_OD_API_INPUT_SIZE = 300;
-  private static final boolean TF_OD_API_IS_QUANTIZED = true;
+  private static final int TF_OD_API_INPUT_SIZE = 640;
+  private static final boolean TF_OD_API_IS_QUANTIZED = false;
   private static final String TF_OD_API_MODEL_FILE = "detect.tflite";
   private static final String TF_OD_API_LABELS_FILE = "labelmap.txt";
   private static final DetectorMode MODE = DetectorMode.TF_OD_API;
@@ -81,6 +81,9 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
   private MultiBoxTracker tracker;
 
   private BorderedText borderedText;
+
+  private long backPress;
+  private Toast backToast;
 
   @Override
   public void onPreviewSizeChosen(final Size size, final int rotation) {
@@ -263,5 +266,18 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
   @Override
   protected void setNumThreads(final int numThreads) {
     runInBackground(() -> detector.setNumThreads(numThreads));
+  }
+
+  @Override
+  public void onBackPressed() {
+    if(backPress + 2000 > System.currentTimeMillis()){
+      backToast.cancel();
+      super.onBackPressed();
+      return;
+    }else{
+        backToast = Toast.makeText(getBaseContext(), "Ketuk sekali lagi untuk keluar", Toast.LENGTH_LONG);
+      backToast.show();
+    }
+    backPress = System.currentTimeMillis();
   }
 }

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".Tampilan_awal">
+
+
+    <Button
+        android:id="@+id/pindah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="334dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="349dp"
+        android:fontFamily="sans-serif-black"
+        android:onClick="pindah"
+        android:text="1. Pendektesian Objek">
+
+    </Button>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="350dp"
+        android:layout_height="120dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="555dp"
+        app:srcCompat="@drawable/tfl2_logo_dark">
+
+    </ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="283dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="416dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Pilihan Menu :"
+        android:textColor="#3E3A3A"
+        android:textSize="24sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <Button
+        android:id="@+id/pindahh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="457dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="226dp"
+        android:fontFamily="sans-serif-black"
+        android:onClick="pindahh"
+        android:text="2. Zingiberaceae">
+
+    </Button>
+
+</RelativeLayout>
